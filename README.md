@@ -9,20 +9,20 @@
 ```javascript
 import { FC } from 'react';
 
-interface ${COMPONENT_NAME}Props {
-
+interface $TM_FILENAME_BASE$Props {
+  
 }
 
-export const ${COMPONENT_NAME}: FC<${COMPONENT_NAME}Props> = ({}) => {
-  return (
-    <div>
-      $END$
-    </div>
-  );
+export const $TM_FILENAME_BASE$:FC<$TM_FILENAME_BASE$Props> = ({}) => {
+ return (
+  <div>
+   $END$
+  </div>
+ );
 };
 ```
 
-4. **Настройте переменную `COMPONENT_NAME`:** Нажмите "Edit variables". Для переменной `COMPONENT_NAME` выберите  "Expression" и вставьте следующий Groovy скрипт:
+4. **Настройте переменную `TM_FILENAME_BASE`:** Нажмите "Edit variables". Для переменной `TM_FILENAME_BASE` выберите  "Expression" и вставьте следующий Groovy скрипт:
 
 ```groovy
 groovyScript("def file = new File(_editor.virtualFile.path); def parent = file.parentFile; return parent.name")
